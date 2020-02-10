@@ -1,0 +1,55 @@
+<html>
+ <head>
+    <script type="text/javascript">
+     function validate()
+     {
+      var username = document.getElementById("uname");
+      var username = document.getElementById("pass").value;
+      var cp = document.getElementById("cp");
+      var sm = document.getElementById("sm");
+      var nm = document.getElementById("nm");
+	if(password.match(/[A-Z]/))
+	{
+	 cp.style.display = "none";
+	}
+	else{
+	  cp.style.display = "block";
+	}
+	if(password.match(/[a-z]/))
+	{
+	 sm.style.display = "none";
+	}
+	else{
+	  sm.style.display = "block";
+	}
+	if(password.match(/[0-9]/))
+	{
+	 nm.style.display = "none";
+	}
+	else{
+	 nm.style.display = "block";
+	}
+	 if(username.value.trim() =="" && password.value.trim() =="" )
+       {
+        alert("blank values are not accepted");
+        return false; 
+	}
+	else
+        {
+	    true;	
+	}
+      
+      
+}
+</script>
+</head>
+<body>
+ 	<form onsubmit="return validate()" action="a2.html">
+ 	<input id="uname" placeholder="username" type="text"/><br><br><br>
+	<input id="pass" placeholder="password" type="password"/><br><br>
+	<p id="cp">capital</p>
+	<p id="sm">small</p>
+	<p id="nm">number</p>
+ 	<button type="submit">REGISTER</button>
+	</form>
+</body>
